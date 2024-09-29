@@ -1,7 +1,11 @@
 version: '3.7'
 services:
   nextcloud:
-    image: nextcloud
+    build:
+      context: ./nextcloud
+      dockerfile: Dockerfile
+      args:
+        GID: ${GID}
     ports:
       - "${NEXTCLOUD_PORT}:80"
     volumes:
