@@ -15,7 +15,7 @@ vim .env
 
 ## Installation
 
-マウントする外部ストレージがあれば、 `docker-compose.yaml` ファイルの `volume` に記載する。しない場合は、そのフィールドを削除すること。
+マウントする外部ストレージがあれば、 `docker-compose.yaml` ファイルの `volume` に記載する。ない場合は、そのフィールドを削除すること。
 
 ```bash
 # サービスの起動
