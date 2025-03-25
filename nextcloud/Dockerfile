@@ -1,4 +1,4 @@
-FROM nextcloud:30.0.0
+FROM nextcloud:30.0.4
 
 ARG GID
 

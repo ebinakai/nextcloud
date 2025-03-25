@@ -25,6 +25,9 @@ services:
       - internal
       - web-network
     restart: unless-stopped
+    command: >
+      /bin/sh -c "echo 'ServerName localhost' >> /etc/apache2/apache2.conf &&
+      apache2-foreground"
 
   db:
     image: mysql:8.0
@@ -54,7 +57,6 @@ services:
     networks:
       - web-network
     restart: unless-stopped
-
 
 volumes:
   db-data:
