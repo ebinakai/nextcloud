@@ -37,6 +37,7 @@ docker-compose up -d --build
 ## Kubernetes
 
 ```bash
-kubectl cp -n nextcloud ./config.php nextcloud-65df84d79c-swbvt:/var/www/html/config/config.php
-kubectl exec -it -n nextcloud nextcloud-65df84d79c-swbvt -- chown www-data:www-data /var/www/html/config/config.php
+kubectl cp -n nextcloud nextcloud-5d98764dfb-kztsd:/var/www/html/config/config.php ./config.php
+kubectl cp -n nextcloud ./config.php nextcloud-5d98764dfb-kztsd:/var/www/html/config/config.php
+kubectl exec -it -n nextcloud nextcloud-5d98764dfb-kztsd -- chown www-data:www-data /var/www/html/config/config.php
 ```

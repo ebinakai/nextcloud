@@ -26,9 +26,6 @@ spec:
       labels:
         app: nextcloud
     spec:
-      securityContext:
-        supplementalGroups:
-        - 1002
       containers:
       - name: nextcloud
         image: nextcloud:31.0.2-apache
