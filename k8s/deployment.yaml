@@ -51,11 +51,11 @@ spec:
               key: password
         resources:
           requests:
-            cpu: "200m"
+            cpu: "100m"
             memory: "256Mi"
           limits:
-            cpu: "1"
-            memory: "1Gi"
+            cpu: "500m"
+            memory: "800Mi"
         volumeMounts:
         - name: nextcloud-data
           mountPath: /var/www/html
