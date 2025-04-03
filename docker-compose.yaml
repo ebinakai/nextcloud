@@ -1,6 +1,5 @@
-version: '3.7'
 services:
-  nextcloud:
+  app:
     build:
       context: .
       dockerfile: Dockerfile
@@ -53,9 +52,11 @@ services:
   nginx:
     image: nginx:1.27.2-alpine
     volumes:
-      - nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf
     networks:
       - web-network
+    ports:
+      - "3080:80"
     restart: unless-stopped
 
 volumes:
